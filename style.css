@@ -1,0 +1,102 @@
+/* Base Styling for Cyberpunk Aesthetic */
+body {
+    font-family: 'Space Mono', monospace;
+    background-color: #0A0A0C; /* Near-black background */
+    color: #E0F2FE; /* Off-white / light blue text */
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    max-width: 700px;
+    width: 95%;
+    border: 1px solid #00CFFF30; /* Subtle cyan border */
+    box-shadow: 0 0 40px rgba(0, 207, 255, 0.2);
+    background: rgba(15, 15, 20, 0.95);
+}
+
+/* Scooked Header Glitch Effect */
+.scooked-title {
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    background-image: linear-gradient(to right, #00CFFF, #00CFFF 30%, #4FA3FF, #A3D9FF);
+    letter-spacing: 5px;
+    position: relative;
+    animation: text-shadow-pulse 2s infinite alternate;
+}
+
+@keyframes text-shadow-pulse {
+    0% { 
+        text-shadow: 0 0 5px #00CFFF, 0 0 10px #00CFFF; 
+    }
+    100% { 
+        text-shadow: 0 0 15px #4FA3FF, 0 0 25px #00CFFF; 
+    }
+}
+
+/* Status & Timer Styles */
+.status-panel-base {
+    border: 1px solid #333;
+    background: #1A1A22;
+}
+
+.status-connected {
+    border-color: #00CFFF;
+    background: #101015;
+    box-shadow: 0 0 15px rgba(0, 207, 255, 0.5);
+}
+
+.time-display {
+    color: #00CFFF;
+    text-shadow: 0 0 10px #00CFFF80;
+}
+
+/* Button Styles */
+.connect-button {
+    background: linear-gradient(135deg, #00CFFF, #00AADD);
+    color: #0A0A0C;
+    font-weight: 700;
+    box-shadow: 0 5px 15px rgba(0, 207, 255, 0.4);
+    transition: all 0.2s ease;
+}
+
+.connect-button:hover {
+    transform: scale(1.02);
+    box-shadow: 0 5px 25px rgba(0, 207, 255, 0.6);
+}
+
+.disconnect-button {
+    background: #EF4444; /* Red */
+    color: #fff;
+    box-shadow: 0 5px 15px rgba(239, 68, 68, 0.4);
+    transition: all 0.2s ease;
+}
+
+.disconnect-button:hover {
+    transform: scale(1.02);
+    box-shadow: 0 5px 25px rgba(239, 68, 68, 0.6);
+}
+
+/* Console and Input */
+.console-output {
+    height: 120px;
+    overflow-y: scroll;
+    background: #000000;
+    border: 1px solid #222;
+    font-size: 11px;
+}
+
+.proxy-input {
+    background-color: #0A0A0C;
+    border-color: #00CFFF;
+    color: #E0F2FE;
+}
+
+.proxy-input:disabled {
+    cursor: not-allowed;
+    opacity: 0.6;
+    border-color: #333;
+}
