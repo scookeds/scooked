@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scooked VPN - Temporary Stealth Access</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="p-4">
+
+    <div id="app-container" class="container mx-auto p-8 rounded-lg transition-all duration-500">
+        
+        <!-- Header -->
+        <header class="text-center mb-8">
+            <h1 class="scooked-title text-5xl font-extrabold tracking-widest">
+                SCOOKED
+            </h1>
+            <p class="mt-2 text-md text-gray-400 font-mono">STEALTH V2.1 / 10-MINUTE ACCESS BRIDGE</p>
+        </header>
+
+        <!-- Status & Timer Panel -->
+        <div id="status-panel" class="status-panel-base rounded-lg p-6 mb-6 text-center transition-all duration-500">
+            <p id="status-text" class="text-xl font-bold mb-3 uppercase text-gray-400">STATUS: DISCONNECTED</p>
+            <div class="flex justify-center items-center">
+                <span class="text-5xl font-mono time-display" id="time-display">00:00</span>
+                <span class="text-xl font-mono ml-4 text-gray-500">MINUTES REMAINING</span>
+            </div>
+        </div>
+
+        <!-- Simulated Console Log -->
+        <div class="mb-6">
+            <p class="text-sm font-bold mb-1 text-gray-500">></p>
+            <div id="console-log" class="console-output p-2">
+                <div class="text-gray-500">[00:00:00] Initializing Scooked Client...</div>
+                <div class="text-gray-500">[00:00:01] Secure Firebase Auth check started...</div>
+                <div class="text-gray-500">[00:00:02] Awaiting connection signal.</div>
+            </div>
+        </div>
+
+        <!-- Connection Control Area -->
+        <div id="control-area" class="text-center space-y-4">
+            <button id="connect-button" class="connect-button w-full py-4 text-xl rounded-md uppercase shadow-xl transition-all duration-300">
+                INITIATE STEALTH MODE (10 MIN)
+            </button>
+            <button id="disconnect-button" class="disconnect-button w-full py-2 text-lg rounded-md uppercase shadow-xl hidden transition-all duration-300">
+                EMERGENCY DISCONNECT
+            </button>
+
+            <!-- Simulated Access Portal (The "Proxy") -->
+            <div id="access-portal" class="p-4 border-t border-gray-700 mt-4 hidden">
+                <p class="text-md font-bold text-cyan-400 mb-2">ACCESS BRIDGE ONLINE:</p>
+                <input id="stealth-url" type="text" placeholder="Enter URL or Search Query... (Press Enter to route)" 
+                       class="proxy-input w-full p-3 border rounded-md focus:ring-2 focus:ring-cyan-500 focus:outline-none font-mono text-sm"
+                       value="https://google.com/search?q=unblocked+games" disabled>
+                <p class="mt-2 text-xs text-gray-600">
+                    *Access is simulated through a temporary private endpoint for 10 minutes.
+                </p>
+            </div>
+        </div>
+
+        <!-- Footer / Credits -->
+        <footer class="mt-8 text-center pt-4 border-t border-gray-800">
+            <p id="user-info" class="text-xs text-gray-600 hidden mb-2">
+                SESSION ID: <span id="user-id-display" class="font-mono text-gray-500 break-all">Loading...</span>
+            </p>
+            <p class="text-sm text-cyan-400 font-bold">
+                DESIGN & CONCEPT BY: <span class="text-white">Just_dave3</span>
+            </p>
+            <p id="disclaimer" class="mt-1 text-xs text-gray-700 italic">
+                DISCLAIMER: This is a client-side web application simulation and cannot bypass actual network security measures.
+            </p>
+        </footer>
+        
+    </div>
+
+    <script type="module" src="script.js"></script>
+</body>
+</html>
